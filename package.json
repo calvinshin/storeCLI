@@ -1,0 +1,24 @@
+{
+  "name": "storeCLI",
+  "version": "1.0.0",
+  "description": "A command line interface that uses SQL to stores items for auction.",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calvinshin/storeCLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calvinshin/storeCLI/issues"
+  },
+  "homepage": "https://github.com/calvinshin/storeCLI#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1",
+    "mysql": "^2.17.1"
+  }
+}
