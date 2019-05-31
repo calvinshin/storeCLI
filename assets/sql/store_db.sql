@@ -24,4 +24,6 @@ VALUES ("Goldfish Snacks", "Food", 2.29, 40, "", "The snack that smiles back!"),
     ("Gatsby MOVING RUBBER", "Beauty", 10.44, 10, 5063, "A stiff hard wax for hair."),
     ("Water", "Food", 17.20, 1, "", "A rare bottle of water collected from a mysterious and sacred source."),
     ("Costume Rings x10", "Fashion", 5, 20, "", "An assortment of costume rings to bedazzle all audiences."),
-    ("AOL CDs", "Software", 99.99, 24, "1.5.62", "Helping you get access to the internet through your home phone!");
+    ("AOL CD", "Software", 99.99, 24, "1.5.62", "Helping you get access to the internet through your home phone!"),
+    ("Pen", "Office Supplies", .99, 100, "", "Bic pen");
+
