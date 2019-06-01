@@ -27,3 +27,14 @@ VALUES ("Goldfish Snacks", "Food", 2.29, 40, "", "The snack that smiles back!"),
     ("AOL CD", "Software", 99.99, 24, "1.5.62", "Helping you get access to the internet through your home phone!"),
     ("Pen", "Office Supplies", .99, 100, "", "Bic pen");
 
+CREATE TABLE accounts (
+    id INT NOT NULL auto_increment,
+    username VARCHAR(30),
+    password VARCHAR(30),
+    PRIMARY KEY(id)
+)
+
+INSERT INTO accounts (username, password)
+VALUES ("Customer", "password"),
+    ("Manager", "password"),
+    ("Supervisor", "password");

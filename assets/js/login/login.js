@@ -16,10 +16,12 @@ function login() {
         },
         {
             name: "password",
-            message: "Password",
+            message: "Password:",
             type: "password",
         }
-    ]);
+    ]).then(function(response) {
+        console.log(response);
+    });
 }
 
 
