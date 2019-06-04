@@ -1,5 +1,7 @@
 var inquirer = require("inquirer");
 
+var passwordCheck = require("./passwordcheck")
+
 function login() {
     global.spacer();
     console.log("Hello! Welcome to this store front!");
@@ -18,9 +20,15 @@ function login() {
             name: "password",
             message: "Password:",
             type: "password",
+            validate: function(response) {
+                if(response.length > 0) {
+                    return true
+                }
+                return false
+            }
         }
     ]).then(function(response) {
-        console.log(response);
+        passwordCheck(response);
     });
 }
 
