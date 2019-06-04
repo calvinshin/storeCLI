@@ -1,10 +1,17 @@
 var mysql = require("mysql");
-password = require("../../../../password");
+var password = require("../../../../password");
+
+var login = require("./login");
+
+var incorrect = function() {
+    console.log("Incorrect password or username. Please try again.");
+    // login();
+}
 
 var passwordCheck = function(object) {
     var name = object.username;
-    var password = object.password;
-
+    var pw = object.password;
+    console.log("Checking the password...");
     // Check mysql for the row with the username
 
     var connection = mysql.createConnection({
@@ -22,7 +29,24 @@ var passwordCheck = function(object) {
 
     connection.connect(function(err) {
         if(err) throw err;
-        console.log("connecting!");
+        connection.query("SELECT * FROM accounts WHERE username = ?", name, function(err, res) {
+            if(err) throw err;
+            global.spacer();
+            if(res[0]) {
+                if(res[0].password === pw) {
+                    // return res;
+                    // Load page here!
+                    console.log("Welcome " + res[0].username + "!");
+                }
+                else{
+                    incorrect();
+                }
+            }
+            else {
+                incorrect();
+            }
+            
+        })
         
         connection.end();
     })
