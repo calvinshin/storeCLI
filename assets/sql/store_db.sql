@@ -31,10 +31,11 @@ CREATE TABLE accounts (
     id INT NOT NULL auto_increment,
     username VARCHAR(30),
     password VARCHAR(30),
+    type VARCHAR(30),
     PRIMARY KEY(id)
-)
+);
 
-INSERT INTO accounts (username, password)
-VALUES ("Customer", "password"),
-    ("Manager", "password"),
-    ("Supervisor", "password");
+INSERT INTO accounts (username, password, type)
+VALUES ("Customer", "password", "customer"),
+    ("Manager", "password", "manager"),
+    ("Supervisor", "password", "supervisor");;

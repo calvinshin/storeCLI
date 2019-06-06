@@ -1,12 +1,14 @@
 var mysql = require("mysql");
 var password = require("../../../../password");
 
-var login = require("./login");
 
 var incorrect = function() {
+    applogin = require("./login");
+
     console.log("Incorrect password or username. Please try again.");
-    // login();
+    applogin();
 }
+
 
 var passwordCheck = function(object) {
     var name = object.username;
@@ -35,20 +37,27 @@ var passwordCheck = function(object) {
             if(res[0]) {
                 if(res[0].password === pw) {
                     // return res;
-                    // Load page here!
-                    console.log("Welcome " + res[0].username + "!");
+                    connection.end();
+
+                    global.user = res[0];
+                    global.user.password = undefined;
+
+
+                    redirect = require("./redirect");
+                    redirect();
                 }
                 else{
+                    connection.end();
                     incorrect();
                 }
             }
             else {
+                connection.end();
                 incorrect();
             }
             
         })
         
-        connection.end();
     })
 
     // return the id of the username back;
