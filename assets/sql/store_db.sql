@@ -6,9 +6,9 @@ USE store_db;
 
 CREATE TABLE items (
     item_id INT NOT NULL auto_increment,
-    product_name VARCHAR(100),
+    product_name VARCHAR(100) NOT NULL,
     department_name VARCHAR(30),
-    price DECIMAL(15,2),
+    price DECIMAL(15,2) NOT NULL,
     stock_quantity INT DEFAULT 1,
     prod_version VARCHAR(30),
     description VARCHAR(1000),

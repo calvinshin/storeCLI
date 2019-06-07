@@ -1,5 +1,7 @@
 var inquirer = require("inquirer");
-var buyItem = require("./buyItem")
+var itemList = require("./itemList")
+
+// Welcome the customer and give them menu options
 
 var customerWelcome = function() {
     inquirer.prompt([
@@ -11,7 +13,8 @@ var customerWelcome = function() {
         }
     ]).then(function(response) {
         if(response.custOption === "Buy an item") {
-            buyItem();
+            console.log("Great, let's buy things!");
+            itemList();
         }
     })
 };
