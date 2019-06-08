@@ -1,7 +1,8 @@
 # storeCLI
 A command line interface that uses SQL to interact with a database of items. 
 
-![Demo](/assets/sample/Customer Video.mp4)
+A video is available for download here: 
+https://github.com/calvinshin/storeCLI/blob/master/assets/sample/Customer%20Video.mp4
 
 ## General Architecture
 The application uses modules to separate functionality into different javascript files. The intention is to be able to connect to the application with different types of logins. 
@@ -39,4 +40,4 @@ The customer is shown a list of available items in the store and prompted if the
 
 A customer is allowed to choose the item number of type in the name of the product they wish to buy. 
 
-![Item purchased](/assets/samples/purchase.png);
+![Item purchased](/assets/sample/purchase.png);
