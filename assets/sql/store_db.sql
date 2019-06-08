@@ -38,4 +38,19 @@ CREATE TABLE accounts (
 INSERT INTO accounts (username, password, type)
 VALUES ("Customer", "password", "customer"),
     ("Manager", "password", "manager"),
-    ("Supervisor", "password", "supervisor");;
+    ("Supervisor", "password", "supervisor");
+
+CREATE TABLE purchases (
+    invoice_number INT NOT NULL auto_increment,
+    user_id INT NOT NULL,
+    item_id INT NOT NULL,
+    item_quantity INT NOT NULL,
+    total_price INT NOT NULL,
+    transaction_date DATE NOT NULL,
+    PRIMARY KEY(invoice_number)
+);
+
+INSERT INTO purchases (user_id, item_id, item_quantity, total_price, transaction_date) 
+VALUES (1, 1, 10, 22.9, CURDATE()),
+    (1, 5, 1, 27, CURDATE()),
+    (1, 9, 10, 22.53, CURDATE()-1);

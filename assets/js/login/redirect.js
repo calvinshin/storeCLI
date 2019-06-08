@@ -1,7 +1,7 @@
 customerWelcome = require("../customer/customerWelcome")
 
 
-var redirect = function() {
+redirect = function() {
     // Load page here!
     console.log("Welcome, " + global.user.username + "!");
     

@@ -1,4 +1,4 @@
-var itemOverview = function(item) {
+itemOverview = function(item) {
     console.log("----------------------------------------");
     console.log("\n\n");
     console.log("Item: " + item.product_name);

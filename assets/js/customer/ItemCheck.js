@@ -1,11 +1,12 @@
-var inquirer = require("inquirer");
-var sqlConnection = require("../assets/sqlConnection")
+inquirer = require("inquirer");
+sqlConnection = require("../assets/sqlConnection")
 
-var itemOverview = require("../assets/itemOverview");
+itemOverview = require("../assets/itemOverview");
+itemQuantityAsk = require("./itemQuantityAsk")
 
 // Note that through this function, query is still active.
 
-var itemCheck = function(res) {
+itemCheck = function(res) {
     inquirer.prompt([
         {
             name: "input",
@@ -32,7 +33,7 @@ var itemCheck = function(res) {
             else {
                 // Provide details about the product.
                 itemOverview(selection);
-
+                itemQuantityAsk(selection);
             }
 
             // Find the right object based on the product 

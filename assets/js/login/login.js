@@ -1,6 +1,6 @@
-var inquirer = require("inquirer");
+inquirer = require("inquirer");
 
-var passwordCheck = require("./passwordcheck")
+passwordCheck = require("./passwordcheck")
 
 function login() {
     global.spacer();

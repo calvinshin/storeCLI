@@ -1,7 +1,7 @@
-var mysql = require("mysql");
-var password = require("../../../../password");
+mysql = require("mysql");
+password = require("../../../../password");
 
-var connection = mysql.createConnection({
+connection = mysql.createConnection({
         host: "localhost",
     
         port: 3306,
